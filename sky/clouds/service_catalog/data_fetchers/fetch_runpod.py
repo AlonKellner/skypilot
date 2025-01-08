@@ -9,6 +9,7 @@ import json
 from pathlib import Path
 import pandas as pd
 from sky.provision.runpod.utils import GPU_NAME_MAP
+from sky.clouds.service_catalog.constants import CATALOG_DIR, CATALOG_SCHEMA_VERSION
 
 
 REGIONS = ["CA", "CZ", "IS", "NL", "NO", "RO", "SE", "US"]
@@ -145,6 +146,6 @@ def update_runpod_catalog(catalog_path: str):
 
 
 if __name__ == "__main__":
-    catalog_path = "runpod/vms.csv"
+    catalog_path = f"{CATALOG_DIR}/{CATALOG_SCHEMA_VERSION}/runpod/vms.csv"
     update_runpod_catalog(catalog_path)
     print(f"RunPod Service Catalog saved to {catalog_path}")
