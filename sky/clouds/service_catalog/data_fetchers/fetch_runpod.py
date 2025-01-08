@@ -143,6 +143,7 @@ def update_runpod_catalog(catalog_path: str):
     csv_path = Path(catalog_path)
     csv_path.parent.mkdir(parents=True, exist_ok=True)
     sky_runpod_prices.to_csv(csv_path.absolute(), index=False)
+    return sky_runpod_prices
 
 
 if __name__ == "__main__":
