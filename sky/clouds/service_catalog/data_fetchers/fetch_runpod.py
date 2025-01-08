@@ -1,3 +1,9 @@
+"""A script that generates the RunPod catalog.
+
+This script uses the RunPod graphql api to query the list and real-time prices of the
+machines offered by RunPod. The script takes less than a second to run.
+"""
+
 import requests
 import json
 from pathlib import Path
